@@ -1,8 +1,8 @@
-from flask import Flask, render_template, request ,redirect,url_for
+from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 @app.route('/')
 def index():
-    return render_template('input.html')
+    return render_template('index.html')
 @app.route('/generate_invoice', methods=['POST'])
 def generate_invoice():
     customer_name = request.form['customer_name']
